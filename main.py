@@ -11,7 +11,7 @@ def parse_args() -> argparse.Namespace:
     return args
 
 
-def get_words(target: pathlib.Path) -> typing.Tuple[str]:
+def get_words(target: pathlib.Path) -> typing.List[str]:
     with open(target, "r") as f:
         contents = f.read().split("\n")
     return contents

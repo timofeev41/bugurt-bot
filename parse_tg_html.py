@@ -3,7 +3,7 @@
 #  Simple Telegram's HTML exported messages parser         #
 #                                                                                                        #
 ############################################
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup #type: ignore
 import argparse
 import typing
 import pathlib
