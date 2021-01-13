@@ -1,8 +1,6 @@
-############################################
-#                                                                                                        #
-#  Simple Telegram's HTML exported messages parser         #
-#                                                                                                        #
-############################################
+###################################################                                                                                                        #
+# Simple Telegram's HTML exported messages parser #
+###################################################
 from bs4 import BeautifulSoup #type: ignore
 import argparse
 import typing
