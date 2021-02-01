@@ -34,7 +34,7 @@ def read_contents(dir: pathlib.Path) -> typing.List[str]:
                 and not "//" in element
                 and element[1 : element.index("\n", 3) + 1] not in things
             ):
-                things.append(element[1 : element.index("\n", 3) + 1])
+                things.append(element[1 : element.index("\n", 3) + 1].upper())
     return sorted(things)
 
 

@@ -20,16 +20,16 @@ def get_words(target: pathlib.Path, options: typing.Optional[str]) -> typing.Lis
         filtered: typing.List[str]
         filtered = []
         for line in contents:
-            if options in line:
+            if options.upper() in line:
                 filtered.append(line)
-        if len(filtered) == 0:
+        if not len(filtered):
             raise Exception(f"There is no {options} in {args.path}")
         return filtered
     else:
         return contents
 
 
-def bugurt(words: typing.List[str], output_size: int = 3) -> None:
+def bugurt(words: typing.List[str], output_size: int = 10) -> None:
     for iter in range(output_size):
         choice = random.choice(words).upper()
         if random.randrange(1, 100) < 10:
