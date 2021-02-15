@@ -54,6 +54,5 @@ if __name__ == "__main__":
     args = parse_args()
     start_time = time.time()
     contents = read_contents(args.path)
-    print("--- Чтение выполнено за %.2f сек ---" % (time.time() - start_time))
     write_contents(contents, args.result)
-    print("--- Общее время выполнения %.2f сек ---" % (time.time() - start_time))
+    print("--- Operation took %.2fs ---" % (time.time() - start_time))
