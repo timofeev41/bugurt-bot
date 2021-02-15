@@ -1,1 +1,1 @@
-config = {'token': "INSERT TG TOKEN"}
+config = {"token": "INSERT TG TOKEN"}

@@ -13,20 +13,20 @@ def parse_args() -> argparse.Namespace:
     return args
 
 
-def read_contents(json_path: pathlib.Path) -> typing.Set:
-    result: typing.Set = set()
-    with open(json_path, 'r') as f:
+def read_contents(json_path: pathlib.Path) -> typing.Set[str]:
+    result: typing.Set[str] = set()
+    with open(json_path, "r") as f:
         data = json.load(f)
-    messages_count = len(data['messages'])
-    for element in data['messages']:
-        if not 'file' in element and type(element['text']) is str:
-            message = element['text']
-            result.add(f'{message}\n')
+    messages_count = len(data["messages"])
+    for element in data["messages"]:
+        if not "file" in element and type(element["text"]) is str:
+            message = element["text"]
+            result.add(f"{message}\n")
     return result
 
 
 def write_contents(
-    contents: typing.List[str], path: pathlib.Path = pathlib.Path("test.txt")
+    contents: typing.Set[str], path: pathlib.Path = pathlib.Path("test.txt")
 ) -> None:
     option = "w"
     if pathlib.Path(path).exists():

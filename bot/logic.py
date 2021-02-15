@@ -28,4 +28,3 @@ def bugurt(words: typing.List[str], output_size: int = 10) -> None:
             print(choice)
         if iter < output_size - 1:
             print("@@@")
-
